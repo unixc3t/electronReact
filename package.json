@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "description": "React and Electron Awesome App",
+  "main": "public/electron.js",
+  "homepage":".",
+  "scripts": {
+    "dev": "nf start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "ebuild": "yarn build && node_modules/.bin/build",
+    "zlbuild": "yarn build && electron-packager . appname"
+  },
+  "devDependencies": {
+    "asar": "^0.14.3",
+    "electron": "^2.0.5",
+    "electron-builder": "^20.22.0",
+    "electron-packager": "^12.1.0"
+  },
+  "build": {
+    "productName": "React Electrion App",
+    "files": [
+      "build/**/*",
+      "electron/*"
+    ]
+  }
+}
